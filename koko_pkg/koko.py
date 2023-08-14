@@ -8,15 +8,18 @@ import json
 torch.set_grad_enabled(False)
 
 # Load the config file
-with open('config.json', 'r') as f:
+BASE_DIR = os.path.dirname(__file__)
+
+# Load the config file
+with open(os.path.join(BASE_DIR, 'config.json'), 'r') as f:
     CONFIG = json.load(f)
 
 # Variables from config
 PROMPT = CONFIG['prompt']
 COLUMN = CONFIG['column']
-MODEL_PATH = CONFIG['model_path']
-DATASET_PATH = CONFIG['dataset_path']
-FAISS_PATH = CONFIG['faiss_path']
+MODEL_PATH = os.path.join(BASE_DIR, CONFIG['model_path'])
+DATASET_PATH = os.path.join(BASE_DIR, CONFIG['dataset_path'])
+FAISS_PATH = os.path.join(BASE_DIR, CONFIG['faiss_path'])
 
 # Load model and dataset
 model = torch.load(MODEL_PATH)
