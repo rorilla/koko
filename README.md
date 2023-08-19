@@ -56,6 +56,8 @@ If you utilize `Koko` or our datasets, please reference our work:
 }
 ```
 
+[![DOI](https://zenodo.org/badge/678091159.svg)](https://zenodo.org/badge/latestdoi/678091159)
+
 ## Acknowledgments
 
 We gratefully acknowledge the Gorilla project for their open-source dataset, which `Koko` leverages to provide enhanced semantic search capabilities. If you use `Koko` or benefit from the underlying Gorilla dataset, please cite the Gorilla paper:
